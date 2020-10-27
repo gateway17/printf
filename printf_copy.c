@@ -1,33 +1,23 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
-*/
-
-void _reverse(char s[]);
-
-int _strl(char *str);
-
-void _itoa(int n, char s[]);
-
-int _printf(const char *format, ...);
-
-int main (void)
-{
-	_printf("Hello my name is %c\n and i am %d years old.\n Also i am in the 30%% of my life\n", 'a', 30);
-	return(0);
-}
-
-/**
 * _printf - print string with different formats
  * @format: string printed with args
  * Return: intr (number of chars
 */
 
+
+int main (void)
+{
+
+	_printf("Hello my name is %c, i am %d years old.\n Also i am in the 30% of my life\n", 'a', 1050);
+	return(0);
+}
+
 int _printf(const char *format, ...)
 {
 int i = 0;
-char string;
+char letter;
 int count = 0;
 char array_itoa[10];
 int integer;
@@ -48,11 +38,12 @@ for (;format[i] != '\0';i++)
 			case char
 			*/
 			case 'c':
-				string = (char)va_arg(lista, int);
-				write(1, &string,1);
+				letter = (char)va_arg(lista, int);
+				write(1, &letter,1);
 				count++;
 				break;
 			
+
 			case 's':
 				printchar = va_arg(lista, char*);
 				write(1, printchar,_strl(printchar));
@@ -65,11 +56,12 @@ for (;format[i] != '\0';i++)
 				count = count + _strl(array_itoa);
 				write(1, array_itoa, _strl(array_itoa));
 				break;
-<<<<<<< HEAD
-			
-=======
 
->>>>>>> 9356e6c381246dad6cc2b5887f05de3aa6aa86cd
+			case '%':
+				_putchar('%');
+				count++;
+				break;
+
 		}
 
 	}
@@ -80,7 +72,7 @@ for (;format[i] != '\0';i++)
 	count++;
 	}
 } 
-va_end(lista);
+	va_end(lista);
 }
 
 /* string length*/
