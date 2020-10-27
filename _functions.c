@@ -1,21 +1,21 @@
-#include <holberton.h>
+#include "holberton.h"
 
 int _integer(int integer)
 {
-	char integer[10];
-	__itoa(integer, array_itoa);
+	char array_itoa[10];
+	_itoa(integer, array_itoa);
 	write(1, array_itoa, _strl(array_itoa));
-	return (_strl(integer));
+	return (_strl(array_itoa));
 }
 
-int _char(char)
+int _pchar(char a)
 {
-	write(1, &_char, 1);
+	write(1, &a, 1);
 	return (1);
 }
 
 int _string(char *_string)
 {
-	write(1, _string,_strl(printchar));
-	return(_strl(printchar));
+	write(1, _string,_strl(_string));
+	return(_strl(_string));
 }
