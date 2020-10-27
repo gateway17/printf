@@ -1,16 +1,7 @@
 #include "holberton.h"
 
 /**
-int _printf(const char *format, ...)
-{
-int i = 0;
-
-/*va_start*/
-/**
-va_start(lista, format);
-if ( condicionales, tenía ejemplos, pero acá van?)
-/**
-return (-1);
+ * main - Entry point
 */
 
 void _reverse(char s[]);
@@ -23,10 +14,15 @@ int _printf(const char *format, ...);
 
 int main (void)
 {
-
 	_printf("Hello my name is %c\n and i am %d years old.\n Also i am in the 30%% of my life\n", 'a', 30);
 	return(0);
 }
+
+/**
+* _printf - print string with different formats
+ * @format: string printed with args
+ * Return: intr (number of chars
+*/
 
 int _printf(const char *format, ...)
 {
@@ -57,7 +53,6 @@ for (;format[i] != '\0';i++)
 				count++;
 				break;
 			
-
 			case 's':
 				printchar = va_arg(lista, char*);
 				write(1, printchar,_strl(printchar));
@@ -69,11 +64,6 @@ for (;format[i] != '\0';i++)
 				_itoa(integer, array_itoa);
 				count = count + _strl(array_itoa);
 				write(1, array_itoa, _strl(array_itoa));
-				break;
-
-			case '%':
-				_putchar('%');
-				count++;
 				break;
 
 		}
