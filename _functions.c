@@ -19,3 +19,4 @@ int _string(char *_string)
 	write(1, _string,_strl(_string));
 	return(_strl(_string));
 }
+

@@ -31,6 +31,7 @@ for (;format[i] != '\0';i++)
 				count += _string(va_arg(lista, char*));
 				break;
 
+			case 'd':
 			case 'i':
 				count += _integer (va_arg(lista, int));
 				break;
