@@ -65,6 +65,7 @@ for (;format[i] != '\0';i++)
 				count = count + _strl(array_itoa);
 				write(1, array_itoa, _strl(array_itoa));
 				break;
+			
 		}
 
 	}
