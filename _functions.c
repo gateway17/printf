@@ -1,5 +1,10 @@
 #include "holberton.h"
 
+/**
+ *_integer - Print integer.
+ *@integer: Number to print.
+ *Return: Mount of characters that has the number.
+ */
 int _integer(int integer)
 {
 	char array_itoa[10];
@@ -9,15 +14,25 @@ int _integer(int integer)
 	return (_strl(array_itoa));
 }
 
+/**
+ *_pchar - Pirnt character.
+ *@lista: Character to print.
+ *Return: Mount of characters that has the number.
+ */
 int _pchar(va_list lista)
 {
 	int i;
-	
+
 	i = va_arg(lista, int);
 	_putchar(i);
 	return (1);
 }
 
+/**
+ * _string - Print string given.
+ *@lista: Number to print.
+ *Return: Mount of characters that has the string.
+ */
 int _string(va_list lista)
 {
 	char *_string2;

@@ -51,12 +51,14 @@ int _putchar(char c)
 	return (write(1, &c, 1));
 }
 /**
- * 
- */ 
-void _puts(char *str) {
+ *_puts - puts clone.
+ *@str: String to print.
+ */
+void _puts(char *str)
+{
 	int i;
 
-	for (i = 0; i< _strl(str); i++)
+	for (i = 0; i < _strl(str); i++)
 	{
 		_putchar(str[i]);
 	}
