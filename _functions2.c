@@ -28,11 +28,7 @@ int function_Switch(char ch, va_list lista)
 
 int pass_trough(va_list lista, const char *format)
 {
-	int i = 0;
-	int count = 0;
-	int tag = 0;
-	int count_f = 0;
-	int _check_p = 0;
+	int i = 0, count = 0, tag = 0, count_f = 0, _check_p = 0;
 
 	while (i < _strl((char *)format) && *format != '\0')
 	{
@@ -43,18 +39,12 @@ int pass_trough(va_list lista, const char *format)
 			i++;
 			tag++;
 			idx = format[i];
-			
 			if (idx == '\0')
 				return (count);
-
 			if (idx == '%')
-			{
 				tag++;
-
-			}
 			else
 			{
-				/* function for switch */
 				count_f = function_Switch(idx, lista);
 				if (count_f >= 0 && count_f != -1)
 				{
@@ -65,21 +55,15 @@ int pass_trough(va_list lista, const char *format)
 					count = count + count_f;
 				}
 				else if (count_f == -1 && idx != '\n')
-				{
 					count += _putchar('%');
-				}
-
 			}
 		}
-		/*function to check percent */
 		_check_p = _percent(&tag, idx);
 		count += _check_p;
 		if (_check_p == 0 && idx != '\0' && idx != '%')
 			count += _putchar(idx);
 			i++;
 		_check_p = 0;
-
-
 	}
 	return (count);
 }

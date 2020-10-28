@@ -27,9 +27,6 @@ holberton.h: - contains all function prototypes used for printf.
 _itoa.c: - convert arguments integer to string. This conversion is a process to take each digits and convert those to ASCII format.
 
 
-////* Pendiente*/////
-    man_3_printf: - manual page for the custom _printf function. 
-
 ### We compiled trought:
 gcc -Wall -Wextra -Werror -pedantic -Wno-format *.c
 
