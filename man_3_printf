@@ -1,0 +1,62 @@
+.TH MAN _PRINTF "27 OCT 2020" LOCAL "HOLBERTON SCHOOL".
+
+.SH NAME
+.B _printf - a printf holberton function
+
+.SH SYNOPSIS
+.SH #include "holberton.h"
+.SH int _printf(const char *format, ...);
+.SH our _printf function
+.SH In _printf trought several files our function evaluate the different cases or proofs 
+that could be presented at the time of printing what was in format.
+.SH
+
+.SH DESCRIPTION
+The following files will evaluate all cases and apply the concepts acquired during previous C language projects:
+- holberton.h (prototypes)
+- _printf.c (base code of our printf function)
+- funciones.c (struct function selects the case)
+The functions in the _printf() produce output according to a format as described below.
+
+.SH FORMAT OF THE FORMAT STRING 
+
+.SH 
+.B The evaluated specifiers:
+.SH 
+.SH %i		printed as integer
+.SH %%		print a single %
+.SH %c		printed a single char
+.SH %s		printed as string 
+.SH %d		printed as integer 
+
+.SH EXAMPLES TEST
+we compare with printf function original our own _printf function with next examples:
+.SH
+.SH _printf("Length:[%d, %i]\n", len, len);
+.SH   printf("Length:[%d, %i]\n", len2, len2);
+.SH _printf("Negative:[%d]\n", -762534);
+.SH   printf("Negative:[%d]\n", -762534);
+.SH _printf("Character:[%c]\n", 'H');
+.SH   printf("Character:[%c]\n", 'H');
+.SH _printf("String:[%s]\n", "I am a string !");
+.SH   printf("String:[%s]\n", "I am a string !");
+.SH _printf("Percent:[%%]\n");
+.SH   printf("Percent:[%%]\n");
+.SH
+.SH Results
+.SH
+.SH Length:[39, 39]
+.SH Length:[39, 39]
+.SH Negative:[-762534]
+.SH Negative:[-762534]
+.SH Character:[H]
+.SH Character:[H]
+.SH String:[I am a string !]
+.SH String:[I am a string !]
+.SH Percent:[%]
+.SH Percent:[%]
+.SH
+.SH ISSUES
+We have a issue in checkers #12 #16 #18 #21 #22 #23 #26
+.SH AUTHORS
+Helena Cortés Gómez, Andrés Sepúlveda
