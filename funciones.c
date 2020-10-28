@@ -71,7 +71,7 @@ int _strl(char *str)
 {
 	int i = 0;
 
-	while (str[i] != '\0')
+	while (*str++)
 		i++;
 	return (i);
 }

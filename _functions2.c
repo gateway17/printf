@@ -37,10 +37,14 @@ int pass_trough(va_list lista, const char *format)
 	{
 		char idx = format[i];
 
-		if (format[i] == '%')
+		if (idx == '%')
 		{
 			i++;
+			tag++;
 			idx = format[i];
+			
+			if (idx == '\0')
+				return (count);
 
 			if (idx == '%')
 			{
@@ -70,7 +74,8 @@ int pass_trough(va_list lista, const char *format)
 		_check_p = _percent(&tag, idx);
 		count += _check_p;
 		if (_check_p == 0 && idx != '\0' && idx != '%')
-			count += _putchar(idx), i++;
+			count += _putchar(idx);
+			i++;
 		_check_p = 0;
 
 
