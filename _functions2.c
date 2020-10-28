@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * *
+ *
  */
 int _percent(int *tag, char idx)
 {
@@ -21,12 +21,13 @@ int _percent(int *tag, char idx)
 int function_Switch(char ch, va_list lista)
 {
 	int count = 0;
+
 	count = _switch(ch, lista);
 	return (count);
 }
 
-int pass_trough(va_list lista, const char *format) 
-{ 
+int pass_trough(va_list lista, const char *format)
+{
 	int i = 0;
 	int count = 0;
 	int tag = 0;
@@ -50,8 +51,8 @@ int pass_trough(va_list lista, const char *format)
 			{
 				tag++;
 
-			} 
-			else 
+			}
+			else
 			{
 				/* function for switch */
 				count_f = function_Switch(idx, lista);
@@ -65,7 +66,7 @@ int pass_trough(va_list lista, const char *format)
 				}
 				else if (count_f == -1 && idx != '\n')
 				{
-					count += _putchar('%');	
+					count += _putchar('%');
 				}
 
 			}
@@ -86,7 +87,7 @@ int pass_trough(va_list lista, const char *format)
 int _switch(char ch, va_list lista)
 {
 	int count = 0;
-	
+
 	switch (ch)
 	{
 		case 'c':
@@ -103,7 +104,7 @@ int _switch(char ch, va_list lista)
 			count += _putchar('%');
 			break;
 	}
-	return count;
+	return (count);
 }
 
 
