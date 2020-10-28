@@ -9,14 +9,28 @@ int _integer(int integer)
 	return (_strl(array_itoa));
 }
 
-int _pchar(char a)
+int _pchar(va_list lista)
 {
-	write(1, &a, 1);
+	int i;
+	
+	i = va_arg(lista, int);
+	_putchar(i);
 	return (1);
 }
 
-int _string(char *_string)
+int _string(va_list lista)
 {
-	write(1, _string, _strl(_string));
-	return (_strl(_string));
+	char *_string2;
+	int count = 0;
+
+	_string2 = va_arg(lista, char *);
+	if (!_string2)
+	{
+		_string2 = "(Null)";
+		_puts(_string2);
+		return (_strl(_string2));
+	}
+	_puts(_string2);
+	count = _strl(_string2);
+	return (count);
 }

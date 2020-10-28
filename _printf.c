@@ -1,53 +1,23 @@
 #include "holberton.h"
 
 /**
- * main - Entry point
- *
+ * _printf -
+ * Return:
  */
 int _printf(const char *format, ...)
 {
-int i = 0;
-int count = 0;
+	int count = 0;
+	const char *new_format;
+	va_list lista;
 
-va_list lista;
+	if (!format)
+		return (-1);
 
-va_start(lista, format);
+	va_start(lista, format);
+	new_format = format;
 
-for (;format[i] != '\0';i++)
-{
-	if (format[i] == '%')
-	{
-		i++;
-		switch (format[i])
-		{
-			/**
-			case char
-			*/
-			case 'c':
-				count += _pchar((char)va_arg(lista, int));
-				break;
+	count = pass_trough(lista, new_format);
 
-			case 's':
-				count += _string(va_arg(lista, char*));
-				break;
-
-			case 'd':
-			case 'i':
-				count += _integer (va_arg(lista, int));
-				break;
-
-			case '%':
-				count += _putchar('%');
-				break;
-		}
-	}
-	else
-	{
-		write(1, &format[i], 1);
-		count++;
-	}
-}
 	va_end(lista);
-
-	return(count);
+	return (count);
 }
