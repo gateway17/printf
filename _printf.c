@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * _printf -
- * Return:
+ * _printf - Print argument(s) according to format
+ * Return: count
  */
 int _printf(const char *format, ...)
 {

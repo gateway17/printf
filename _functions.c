@@ -15,9 +15,9 @@ int _integer(int integer)
 }
 
 /**
- *_pchar - Pirnt character.
+ *_pchar - Print character.
  *@lista: Character to print.
- *Return: Mount of characters that has the number.
+ *Return: Amount of characters
  */
 int _pchar(va_list lista)
 {
@@ -31,7 +31,7 @@ int _pchar(va_list lista)
 /**
  * _string - Print string given.
  *@lista: Number to print.
- *Return: Mount of characters that has the string.
+ *Return: Amount of characters that has the string.
  */
 int _string(va_list lista)
 {
